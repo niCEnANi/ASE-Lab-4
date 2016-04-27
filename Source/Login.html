@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="Login">
+    <head>
+        <title>Login Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="angular.min.js"></script>
+        <script src="LoginValidation.js"></script>
+        <style>
+        table{
+            border: 5px #000 solid;
+            caption-side: top;
+            background-color: white;
+            align-self: center;
+            position: absolute;
+            top: 20%;
+            width: fit-content;
+            right: 50%;
+        }
+    </style>
+    </head>
+    <body ng-controller="LoginController">
+        <table>
+            <tr>
+                <td></td>
+                <td style="color: black"><b>Login</b></td>
+            </tr>
+        <tr>
+            <td>
+                UserName: 
+            </td>
+            <td>
+                <input type="text" ng-model="UserName" id="Username" placeholder="Enter user name" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Password:
+            </td>
+            <td>
+                <input type="password" ng-model="Password" id="password" placeholder="Enter password" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button ng-click="validateRegistrationData(UserName,Password)" value="Login">Login</button>
+            </td>
+            <td>
+				<button onclick="window.location='Registration.html'" value="Register">Register</button>
+			</td>
+        </tr>
+        </table>
+    </body>
+</html>
